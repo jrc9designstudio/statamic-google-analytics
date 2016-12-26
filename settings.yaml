@@ -1,0 +1,10 @@
+fields:
+  tracking_id:
+    type: text
+    instructions: Your Google Analytics Tracking ID
+    validate: required
+    width: 100
+  async:
+    type: toggle
+    instructions: Use Google Analytics Async Tracking Code
+    default: false
