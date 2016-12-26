@@ -3,6 +3,7 @@
 namespace Statamic\Addons\Ga;
 
 use Statamic\Extend\Tags;
+use Statamic\API\User;
 
 class GaTags extends Tags
 {
@@ -15,6 +16,7 @@ class GaTags extends Tags
     {
         $tracking_id = $this->getConfig('tracking_id', 'UA-');
         $async = $this->getConfig('async', false);
+        $track_uid = $this->getConfig('track_uid', false);
 
         if ($async)
         {
@@ -32,6 +34,16 @@ class GaTags extends Tags
 
         $tracking_code .= "ga('create', '" . $tracking_id . "', 'auto');";
         $tracking_code .= "ga('send', 'pageview');";
+
+        if ($track_uid)
+        {
+        	$user = User::getCurrent();
+        	if ($user)
+        	{
+        	    $user_id = $user->id();
+                $tracking_code .= "ga('set', 'userId', " . $user_id  . ");";
+            }
+        }
 
 	    $tracking_code .= "</script>";
 
