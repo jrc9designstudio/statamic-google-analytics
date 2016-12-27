@@ -1,6 +1,6 @@
 # Google Analytics for Statamic 2    
 Requirement: Statamic v2.x  
-Version: 1.0.3  
+Version: 0.0.1  
 
 ### Version note
 - 0.0.1 Dev: this addon is still in development and ist not yet complete.
