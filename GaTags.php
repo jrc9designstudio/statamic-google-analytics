@@ -15,6 +15,7 @@ class GaTags extends Tags
     public function index()
     {
         $tracking_id = $this->getConfig('tracking_id', 'UA-');
+        $display_features = $this->getConfig('display_features', false);
         $link_id = $this->getConfig('link_id', false);
         $async = $this->getConfig('async', false);
         $track_uid = $this->getConfig('track_uid', false);
@@ -35,6 +36,11 @@ class GaTags extends Tags
         }
         
         $tracking_code .= "ga('create', '" . $tracking_id . "', 'auto');";
+        
+        if ($display_features)
+		{
+			$tracking_code .= "ga('require', 'displayfeatures');";
+		}
         
         if ($link_id)
         {

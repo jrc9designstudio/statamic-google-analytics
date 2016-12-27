@@ -9,6 +9,8 @@ fields:
     type: toggle
   beacon:
     type: toggle
+  display_features:
+    type: toggle
   link_id:
     type: toggle
     
