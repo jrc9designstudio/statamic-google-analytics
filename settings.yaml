@@ -7,4 +7,8 @@ fields:
     type: toggle
   track_uid:
     type: toggle
+  beacon:
+    type: toggle
+  link_id:
+    type: toggle
     
