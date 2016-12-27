@@ -33,19 +33,19 @@ class GaTags extends Tags
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
                 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');";
         }
-		
-		if ($beacon)
-		{
-            // Set tracking to beacon in browsers that support it
-            $tracking_code .= "ga('set', 'transport', 'beacon');";
-        }
         
         $tracking_code .= "ga('create', '" . $tracking_id . "', 'auto');";
         
         if ($link_id)
         {
         	// Use Enhanced link attribution if enabled
-        	ga('require', 'linkid');
+        	$tracking_code .= "ga('require', 'linkid');";
+        }
+        
+        if ($beacon)
+		{
+            // Set tracking to beacon in browsers that support it
+            $tracking_code .= "ga('set', 'transport', 'beacon');";
         }
         
         $tracking_code .= "ga('send', 'pageview');";
