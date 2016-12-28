@@ -43,6 +43,11 @@ class GaTags extends Tags
 	                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');";
 	        }
         
+            if ($ignore_admins && $user && $user->can('cp:access'))
+            {
+            	$tracking_code .= "window['ga-disable-' . $tracking_id] = true";
+            }
+        
 	        $tracking_code .= "ga('create', '" . $tracking_id . "', 'auto');";
         
 	        if ($display_features)
@@ -61,11 +66,6 @@ class GaTags extends Tags
 	            // Set tracking to beacon in browsers that support it
 	            $tracking_code .= "ga('set', 'transport', 'beacon');";
 	        }
-            
-            if ($ignore_admins && $user && $user->can('cp:access'))
-            {
-            	$tracking_code .= "window['ga-disable-' . $tracking_id] = true";
-            }
             
 	        $tracking_code .= "ga('send', 'pageview');";
 
