@@ -11,5 +11,7 @@ return [
     'display_features' => 'Enable Display Features',
     'display_features_instruct' => 'Enable Display Features',
     'link_id' => 'Enable Enhanced Link Attribution',
-    'link_id_instruct' => 'Enhanced Link Attribution improves the accuracy of your In-Page Analytics report by automatically differentiating between multiple links to the same URL on a single page by using link element IDs. You must enable Enhanced Link Attribution in the Admin UI of your Google Analytics Account, see: https://support.google.com/analytics/answer/2558867#enable'
+    'link_id_instruct' => 'Enhanced Link Attribution improves the accuracy of your In-Page Analytics report by automatically differentiating between multiple links to the same URL on a single page by using link element IDs. You must enable Enhanced Link Attribution in the Admin UI of your Google Analytics Account, see: https://support.google.com/analytics/answer/2558867#enable',
+    'ignore_admins' => 'Ignore Admins',
+    'ignore_admins_instruct' => 'Do not track users with control panel access'
 ];

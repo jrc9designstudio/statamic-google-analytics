@@ -21,8 +21,13 @@ class GaTags extends Tags
             $display_features = $this->getConfig('display_features', false);
 	        $link_id = $this->getConfig('link_id', false);
 	        $async = $this->getConfig('async', false);
-	        $track_uid = $this->getConfig('track_uid', false);
 	        $beacon = $this->getConfig('beacon', false);
+	        $track_uid = $this->getConfig('track_uid', false);
+	        $ignore_admins = $this->getConfig('ignore_admins', false);
+	        if ($track_uid || $ignore_admins)
+	        {
+	            $user = User::getCurrent();
+	        }
 
 	        if ($async)
 	        {
@@ -51,22 +56,23 @@ class GaTags extends Tags
 	        	$tracking_code .= "ga('require', 'linkid');";
 	        }
         
-	        if ($beacon)
+            if ($beacon)
 			{
 	            // Set tracking to beacon in browsers that support it
 	            $tracking_code .= "ga('set', 'transport', 'beacon');";
 	        }
-        
+            
+            if ($ignore_admins && $user && $user->can('cp:access'))
+            {
+            	$tracking_code .= "window['ga-disable-' . $tracking_id] = true";
+            }
+            
 	        $tracking_code .= "ga('send', 'pageview');";
 
-	        if ($track_uid)
+	        if ($track_uid && $user)
 	        {
-	        	$user = User::getCurrent();
-	        	if ($user)
-	        	{
-	        	    $user_id = $user->id();
-	                $tracking_code .= "ga('set', 'userId', " . $user_id  . ");";
-	            }
+	        	$user_id = $user->id();
+	            $tracking_code .= "ga('set', 'userId', " . $user_id  . ");";
 	        }
 
 		    $tracking_code .= "</script>";

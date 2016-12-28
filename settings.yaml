@@ -13,4 +13,6 @@ fields:
     type: toggle
   link_id:
     type: toggle
+  ignore_admins:
+    type: toggle
   
