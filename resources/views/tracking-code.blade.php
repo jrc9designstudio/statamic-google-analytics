@@ -13,7 +13,7 @@
 
 @if ($ignore_admins && $user && $user->can('cp:access'))
 	{{-- Disable tracking if ignore admins is true, user is signed in and can access cp --}}
-	window['ga-disable-' . $tracking_id] = true;
+	window['ga-disable-{{ $tracking_id }}'] = true;
 @endif
     
     {{-- Start tacking code --}}    
