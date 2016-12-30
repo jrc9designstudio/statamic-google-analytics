@@ -29,4 +29,4 @@ ignore_admins: false
 ```
 
 ### Environment Support
-- Use Statamic's built in (enviroment specific settings)[https://docs.statamic.com/settings#environment] to specify different settings for Google Analytics in development or testing.
+- Use Statamic's built in (environment specific settings)[https://docs.statamic.com/settings#environment] to specify different settings for Google Analytics in development or testing.
