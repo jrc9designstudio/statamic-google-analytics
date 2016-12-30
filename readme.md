@@ -20,12 +20,13 @@ track_uid: false
 beacon: false
 display_features: false
 link_id: false
+ignore_admins: false
 ```
-- Manually add the tag to your theme layout file
+- Manually add the tag to your theme layout file just before your close `</head>` tag.
 
 ```
   {{ google_analytics }}
 ```
 
 ### Environment Support
-- Use Statamic's built in settings for environment overrides to specify different settings for Google Analytics in development or testing.
+- Use Statamic's built in (enviroment specific settings)[https://docs.statamic.com/settings#environment] to specify different settings for Google Analytics in development or testing.
