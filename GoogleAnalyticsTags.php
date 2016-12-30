@@ -1,14 +1,14 @@
 <?php
 
-namespace Statamic\Addons\Ga;
+namespace Statamic\Addons\GoogleAnalytics;
 
 use Statamic\Extend\Tags;
 use Statamic\API\User;
 
-class GaTags extends Tags
+class GoogleAnalyticsTags extends Tags
 {
     /**
-     * The {{ ga }} tag
+     * The {{ google_analytics }} tag
      *
      * @return string|array
      */

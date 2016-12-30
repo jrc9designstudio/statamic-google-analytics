@@ -1,11 +1,11 @@
 <?php
 
-namespace Statamic\Addons\Ga;
+namespace Statamic\Addons\GoogleAnalytics;
 
 use Statamic\API\Nav;
 use Statamic\Extend\Listener;
 
-class GaListener extends Listener
+class GoogleAnalyticsListener extends Listener
 {
     public $events = [
         'cp.nav.created' => 'addNavItems'
@@ -13,7 +13,7 @@ class GaListener extends Listener
 
     public function addNavItems($nav)
     {
-        $store = Nav::item('Google Analytics')->route('addon.settings', 'ga')->icon('line-graph');
+        $store = Nav::item('Google Analytics')->route('addon.settings', 'google-analytics')->icon('line-graph');
         $nav->addTo('configure', $store);
     }
 }

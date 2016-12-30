@@ -1,6 +1,6 @@
-name: GA
-version: 0.0.1 Dev
+name: Google Analytics
+version: 0.0.3 Dev
 description: Add Google Analytics to Statamic V2
-url: https://github.com/jrc9designstudio/statamic-ga
+url: https://github.com/jrc9designstudio/statamic-google-analytics
 developer: JRC9 Design Sudio
 developer_url: https://github.com/jrc9designsudio
