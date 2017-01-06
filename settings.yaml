@@ -5,14 +5,28 @@ fields:
     width: 100
   async:
     type: toggle
-  track_uid:
-    type: toggle
+    width: 50
   beacon:
     type: toggle
+    width: 50
   display_features:
     type: toggle
+    width: 50
   link_id:
     type: toggle
+    width:50
+  track_uid:
+    type: toggle
+    width: 50
   ignore_admins:
     type: toggle
-  
+    width: 50
+  debug:
+    type: toggle
+    width: 33
+  trace_debugging:
+    type: toggle
+    width: 33
+  disable_sending:
+    type: toggle
+    width: 33

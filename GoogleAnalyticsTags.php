@@ -15,29 +15,33 @@ class GoogleAnalyticsTags extends Tags
     public function index()
     {
         $tracking_id = str_replace(' ', '', $this->getConfig('tracking_id', ''), $value);
-        
-        if (!empty($tracking_id))
-        {	
-            $display_features = $this->getConfig('display_features', false);
-            $async = $this->getConfig('async', false);
-	        $link_id = $this->getConfig('link_id', false);
-	        $beacon = $this->getConfig('beacon', false);
-	        $track_uid = $this->getConfig('track_uid', false);
-	        $ignore_admins = $this->getConfig('ignore_admins', false);
-	        if ($track_uid || $ignore_admins)
-	        {
-	            $user = User::getCurrent();
-	        }
-	        else
-	        {
-	        	$user = false;
-	        }
 
-			return $this->view('tracking-code', compact('tracking_id', 'async', 'display_features', 'link_id', 'beacon', 'track_uid', 'ignore_admins', 'user'))->render();
-	    }
-	    else
-	    {
-	    	return '<!-- Google Analytics Tracking code is not setup yet! -->';
-	    }
+        if (!empty($tracking_id))
+        {
+          $display_features = $this->getConfig('display_features', false);
+          $async = $this->getConfig('async', false);
+            $link_id = $this->getConfig('link_id', false);
+            $beacon = $this->getConfig('beacon', false);
+            $track_uid = $this->getConfig('track_uid', false);
+            $ignore_admins = $this->getConfig('ignore_admins', false);
+            if ($track_uid || $ignore_admins)
+            {
+                $user = User::getCurrent();
+            }
+            else
+            {
+                $user = false;
+            }
+
+          $debug = $this->getConfig('debug', false);
+          $trace_debugging = $this->getConfig('trace_debugging', false);
+          $disable_sending = $this->getConfig('disable_sending', false);
+
+          return $this->view('tracking-code', compact('tracking_id', 'async', 'display_features', 'link_id', 'beacon', 'track_uid', 'ignore_admins', 'user', 'debug', 'trace_debugging', 'disable_sending'))->render();
+        }
+        else
+        {
+            return '<!-- Google Analytics Tracking code is not setup yet! -->';
+        }
     }
 }
