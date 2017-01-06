@@ -34,3 +34,4 @@ disable_sending: false
 
 ### Environment Support
 - Use Statamic's built in (environment specific settings)[https://docs.statamic.com/settings#environment] to specify different settings for Google Analytics in development or testing.
+- There is a slight bug with this. See https://github.com/statamic/v2-hub/issues/846 and https://github.com/statamic/v2-hub/issues/1073
