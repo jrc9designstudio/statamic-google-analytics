@@ -18,8 +18,8 @@ class GoogleAnalyticsTags extends Tags
 
         if (!empty($tracking_id))
         {
-          $display_features = $this->getConfig('display_features', false);
-          $async = $this->getConfig('async', false);
+            $display_features = $this->getConfig('display_features', false);
+            $async = $this->getConfig('async', false);
             $link_id = $this->getConfig('link_id', false);
             $beacon = $this->getConfig('beacon', false);
             $track_uid = $this->getConfig('track_uid', false);
@@ -33,11 +33,11 @@ class GoogleAnalyticsTags extends Tags
                 $user = false;
             }
 
-          $debug = $this->getConfig('debug', false);
-          $trace_debugging = $this->getConfig('trace_debugging', false);
-          $disable_sending = $this->getConfig('disable_sending', false);
+            $debug = $this->getConfig('debug', false);
+            $trace_debugging = $this->getConfig('trace_debugging', false);
+            $disable_sending = $this->getConfig('disable_sending', false);
 
-          return $this->view('tracking-code', compact('tracking_id', 'async', 'display_features', 'link_id', 'beacon', 'track_uid', 'ignore_admins', 'user', 'debug', 'trace_debugging', 'disable_sending'))->render();
+            return $this->view('tracking-code', compact('tracking_id', 'async', 'display_features', 'link_id', 'beacon', 'track_uid', 'ignore_admins', 'user', 'debug', 'trace_debugging', 'disable_sending'))->render();
         }
         else
         {

@@ -11,7 +11,7 @@
     @if ($debug)
         })(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
     @else
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     @endif
 @endif
 
