@@ -2,9 +2,6 @@
 *Requirement:* Statamic v2.x  
 *Version:* 1.0.0
 
-### Version note
-- 1.0.0 Beta: This addon is complete but would benefit with further testing. Please submit issues or pull requests if you run into any issues.
-
 ### What is this?
 Add Google Analytics support to Statamic 2 and configure tracking from the Control Panel
 
