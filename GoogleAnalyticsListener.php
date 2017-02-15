@@ -3,6 +3,7 @@
 namespace Statamic\Addons\GoogleAnalytics;
 
 use Statamic\API\Nav;
+use Statamic\API\User;
 use Statamic\Extend\Listener;
 
 class GoogleAnalyticsListener extends Listener
@@ -11,9 +12,15 @@ class GoogleAnalyticsListener extends Listener
         'cp.nav.created' => 'addNavItems'
     ];
 
+    /**
+     * @param \Statamic\CP\Navigation\Nav $nav
+     */
     public function addNavItems($nav)
     {
-        $store = Nav::item('Google Analytics')->route('addon.settings', 'google-analytics')->icon('line-graph');
-        $nav->addTo('configure', $store);
+        $user = User::getCurrent();
+        if ($user && $user->isSuper()) {
+            $store = Nav::item('Google Analytics')->route('addon.settings', 'google-analytics')->icon('line-graph');
+            $nav->addTo('configure', $store);
+        }
     }
 }
