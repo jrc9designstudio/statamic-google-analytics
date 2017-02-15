@@ -1,6 +1,6 @@
 # Google Analytics for Statamic 2
 *Requirement:* Statamic v2.x  
-*Version:* 1.0.0
+*Version:* 1.0.2
 
 ### What is this?
 Add Google Analytics support to Statamic 2 and configure tracking from the Control Panel
