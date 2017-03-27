@@ -1,0 +1,10 @@
+tracking_id: ''
+async: false
+beacon: false
+display_features: false
+link_id: false
+track_uid: false
+ignore_admins: false
+debug: false
+trace_debugging: false
+disable_sending: false

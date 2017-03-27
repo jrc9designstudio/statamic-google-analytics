@@ -20,7 +20,7 @@ class GoogleAnalyticsListener extends Listener
         $user = User::getCurrent();
         if ($user && $user->isSuper()) {
             $store = Nav::item('Google Analytics')->route('addon.settings', 'google-analytics')->icon('line-graph');
-            $nav->addTo('configure', $store);
+            $nav->addTo('tools', $store);
         }
     }
 }

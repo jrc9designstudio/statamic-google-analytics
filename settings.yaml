@@ -3,24 +3,32 @@ fields:
     type: text
     validate: required
     width: 100
+  performance_section:
+    type: section
   async:
     type: toggle
     width: 50
   beacon:
     type: toggle
     width: 50
+  tracking_features_section:
+    type: section
   display_features:
     type: toggle
     width: 50
   link_id:
     type: toggle
     width:50
+  user_tracking_options_section:
+    type: section
   track_uid:
     type: toggle
     width: 50
   ignore_admins:
     type: toggle
     width: 50
+  debug_options_section:
+    type: section
   debug:
     type: toggle
     width: 33
