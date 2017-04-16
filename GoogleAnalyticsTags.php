@@ -24,11 +24,9 @@ class GoogleAnalyticsTags extends Tags
             $beacon = $this->getConfig('beacon', false);
             $track_uid = $this->getConfig('track_uid', false);
             $ignore_admins = $this->getConfig('ignore_admins', false);
-            if ($track_uid || $ignore_admins)
-            {
-                $user = User::getCurrent();
-            }
-            else
+            $user = User::getCurrent();
+
+            if (!$track_uid || $ignore_admins)
             {
                 $user = false;
             }
