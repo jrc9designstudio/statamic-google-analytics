@@ -26,7 +26,7 @@ class GoogleAnalyticsTags extends Tags
             $ignore_admins = $this->getConfig('ignore_admins', false);
             $user = User::getCurrent();
 
-            if (!$track_uid || $ignore_admins)
+            if (!($track_uid || $ignore_admins))
             {
                 $user = false;
             }
