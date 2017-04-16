@@ -37,9 +37,6 @@ class GoogleAnalyticsTags extends Tags
 
             return $this->view('tracking-code', compact('tracking_id', 'async', 'display_features', 'link_id', 'beacon', 'track_uid', 'ignore_admins', 'user', 'debug', 'trace_debugging', 'disable_sending'))->render();
         }
-        else
-        {
-            return '<!-- Google Analytics Tracking code is not setup yet! -->';
-        }
+        return '<!-- Google Analytics Tracking code is not setup yet! -->';
     }
 }
