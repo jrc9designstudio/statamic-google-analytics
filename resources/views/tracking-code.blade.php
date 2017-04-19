@@ -46,7 +46,7 @@
     ga('set', 'transport', 'beacon');
 @endif
 
-@if ($track_uid && $user)
+@if (($track_uid && $user && !$ignore_admins) || ($track_uid && $user && $ignore_admins && !$user->can('cp:access')) )
     ga('set', 'userId', '{{ $user->id() }}');
 @endif
 
