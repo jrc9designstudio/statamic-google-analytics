@@ -35,3 +35,9 @@ disable_sending: false
 
 ### Note
 - uBlock Origin, and possibly other addons of this type can cause the settings not to save properly for this addon. If you disable the plugin for your domain the settings should save fine.
+
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/eNH4J7YAub4Y19PG8yjyuzLu/jrc9designstudio/statamic-google-analytics'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/eNH4J7YAub4Y19PG8yjyuzLu/jrc9designstudio/statamic-google-analytics.svg' />
+</a>
+
+Made with ❤️ by [JRC9 Design Studio](https://jrc9.ca)
