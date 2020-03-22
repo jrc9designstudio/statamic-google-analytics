@@ -18,7 +18,7 @@ fields:
     width: 50
   link_id:
     type: toggle
-    width:50
+    width: 50
   user_tracking_options_section:
     type: section
   track_uid:
